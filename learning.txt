@@ -1,0 +1,3 @@
+HTML : element#name gives element the id #name
+CSS : About grid and grid arrangement
+JS: Learned about eval function in js and Arrays
