@@ -11,9 +11,8 @@ btns.map((button) => {
 
     if (btn == `=` && result != "") {
       let sum = eval(result);
-      screen.textContent = sum;
-      log += `<div> ${result} = ${sum} </div>`;
-      console.log(log);
+      screen.textContent = Math.round(sum * 100000) / 100000;
+      log += `<div> ${result} = ${Math.round(sum * 100000) / 100000} </div>`;
       logscreen.innerHTML = log;
       result = sum;
     } else if (btn == `AC`) {
@@ -24,6 +23,8 @@ btns.map((button) => {
     } else if (btn == `←`) {
       screen.textContent = screen.textContent.slice(0, -1);
       result = screen.textContent;
+    } else if (btn == `=` && result == "") {
+      console.log("-");
     } else {
       result += btn;
       screen.textContent += btn;
